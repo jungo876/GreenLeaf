@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 150 41% 30%; /* Green Pots primary color: #2D6A4F */
+  --primary-foreground: 211 100% 99%;
+  --secondary: 145 36% 70%; /* Green Pots secondary color: #95D5B2 */
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 145 36% 90%; /* Green Pots accent color: #D8F3DC */
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 150 41% 30%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 150 41% 30%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 145 36% 70%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 145 36% 90%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-neutral-cream text-foreground;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .hero-gradient {
+    background: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--secondary)) 50%, hsl(var(--secondary)) 100%);
+  }
+
+  .products-bg {
+    background: linear-gradient(to bottom, hsl(0, 0%, 98%) 0%, hsl(60, 33%, 92%) 100%);
+  }
+
+  /* Animation utilities */
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+  
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+  
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .animate-delay-500 {
+    animation-delay: 500ms;
+  }
+  
+  .animate-delay-600 {
+    animation-delay: 600ms;
+  }
+  
+  .animate-delay-700 {
+    animation-delay: 700ms;
+  }
+  
+  .animate-delay-800 {
+    animation-delay: 800ms;
+  }
+}
+
+@keyframes leafOpen {
+  0% { 
+    transform: scale(0.5) rotate(-10deg);
+    opacity: 0;
+  }
+  100% { 
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  0% { 
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { 
+    transform: scale(1);
+  }
+  50% { 
+    transform: scale(1.05);
+  }
+}
+
+.animate-leaf-open {
+  animation: leafOpen 1.5s ease-out forwards;
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Custom colors */
+.bg-primary-light {
+  background-color: #40916C;
+}
+
+.bg-primary-lighter {
+  background-color: #52B788;
+}
+
+.bg-secondary-light {
+  background-color: #B7E4C7;
+}
+
+.bg-secondary-lighter {
+  background-color: #D8F3DC;
+}
+
+.bg-neutral-cream {
+  background-color: #F8F9FA;
+}
+
+.bg-neutral-beige {
+  background-color: #F1F1E6;
+}
+
+.text-primary-light {
+  color: #40916C;
+}
+
+.text-primary-lighter {
+  color: #52B788;
+}
+
+html {
+  scroll-behavior: smooth;
+}
