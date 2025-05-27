@@ -30,7 +30,7 @@ export default function FeaturesSection() {
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold font-display text-primary mb-4">Why Choose Green Pots?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold font-display text-primary mb-4">Why Choose Green Leaf?</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">We're passionate about plants and committed to helping you create your own indoor oasis.</p>
         </motion.div>
         

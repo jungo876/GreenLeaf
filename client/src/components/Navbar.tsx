@@ -30,7 +30,7 @@ export default function Navbar() {
           <div className="flex items-center space-x-2">
             <Leaf className="h-6 w-6 text-primary-light" />
             <h1 className="text-2xl font-bold font-display text-primary">
-              Green Pots
+              Green Leaf
             </h1>
           </div>
 
@@ -57,7 +57,7 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center space-x-4">
             <Button className="bg-primary hover:bg-primary-light text-white rounded-full transition duration-300 flex items-center">
-              Shop Now
+              <a href="#products">Shop Now</a>
             </Button>
           </div>
 

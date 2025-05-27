@@ -33,22 +33,32 @@ export default function ContactForm() {
 
   const onSubmit = async (data: ContactFormValues) => {
     try {
-      // FormSubmit would be integrated here in a real application
-      // For now, we'll simulate a successful submission
-      console.log("Form submitted:", data);
-      toast({
-        title: "Message sent!",
-        description: "We'll get back to you as soon as possible.",
-        variant: "default",
-      });
-      form.reset();
-    } catch (error) {
-      toast({
-        title: "Error sending message",
-        description: "Please try again later.",
-        variant: "destructive",
-      });
-    }
+  // FormSubmit would be integrated here in a real application
+  console.log("Form submitted:", data);
+
+  // Prepare WhatsApp message
+  const message = encodeURIComponent(`Hi, this is ${data.name}.\nSubject:${data.subject},\nMessage: ${data.message},\nEmail:${data.email}`);
+  const phoneNumber = "918017194298"; // Use full international format without '+' sign
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+
+  // Open WhatsApp chat in a new tab
+  window.open(whatsappURL, "_blank");
+
+  toast({
+    title: "Message sent!",
+    description: "We'll get back to you as soon as possible.",
+    variant: "default",
+  });
+
+  form.reset();
+} catch (error) {
+  toast({
+    title: "Error sending message",
+    description: "Please try again later.",
+    variant: "destructive",
+  });
+}
+
   };
 
   return (
@@ -73,7 +83,7 @@ export default function ContactForm() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Our Location</h3>
-                    <p className="opacity-80">123 Green Street, Plantersville, CA 94123</p>
+                    <p className="opacity-80">Salt Lake, Sector-V, Bidhannagar, Kolkata, West Bengal</p>
                   </div>
                 </div>
                 
@@ -83,7 +93,7 @@ export default function ContactForm() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Phone Number</h3>
-                    <p className="opacity-80">(555) 123-4567</p>
+                    <p className="opacity-80">8017194298</p>
                   </div>
                 </div>
                 
@@ -93,7 +103,7 @@ export default function ContactForm() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Email Address</h3>
-                    <p className="opacity-80">hello@greenpots.com</p>
+                    <p className="opacity-80">greenleafofficial.info@gmail.com</p>
                   </div>
                 </div>
                 
@@ -103,7 +113,7 @@ export default function ContactForm() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Business Hours</h3>
-                    <p className="opacity-80">Monday - Friday: 9am - 5pm<br />Saturday: 10am - 4pm</p>
+                    <p className="opacity-80">Monday - Sunday: 9am - 8pm</p>
                   </div>
                 </div>
               </div>
@@ -116,7 +126,7 @@ export default function ContactForm() {
                 <form 
                   onSubmit={form.handleSubmit(onSubmit)} 
                   className="space-y-6"
-                  action="https://formsubmit.co/your@email.com" 
+                  action="https://formsubmit.co/arghyakanji239@gmail.com" 
                   method="POST"
                 >
                   <FormField

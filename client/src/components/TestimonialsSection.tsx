@@ -4,21 +4,21 @@ import { Star } from "lucide-react";
 const testimonials = [
   {
     id: 1,
-    text: "\"My Monstera from Green Pots arrived in perfect condition and has been thriving ever since. The care instructions were incredibly helpful!\"",
+    text: "\"My Monstera from Green Leaf arrived in perfect condition and has been thriving ever since. The care instructions were incredibly helpful!\"",
     name: "Jessica Miller",
     role: "Plant Enthusiast",
     initials: "JM"
   },
   {
     id: 2,
-    text: "\"Green Pots has transformed my apartment into a jungle paradise! The quality of their plants is unmatched, and their customer service is exceptional.\"",
+    text: "\"Green Leaf has transformed my apartment into a jungle paradise! The quality of their plants is unmatched, and their customer service is exceptional.\"",
     name: "Michael Rodriguez",
     role: "Home Designer",
     initials: "MR"
   },
   {
     id: 3,
-    text: "\"As someone who previously killed every plant they owned, I'm amazed at how well my Green Pots purchases are doing. Their care guides are a lifesaver!\"",
+    text: "\"As someone who previously killed every plant they owned, I'm amazed at how well my Green Leaf purchases are doing. Their care guides are a lifesaver!\"",
     name: "Aisha Thompson",
     role: "First-Time Plant Owner",
     initials: "AT"
@@ -37,7 +37,7 @@ export default function TestimonialsSection() {
           transition={{ duration: 0.7 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">What Our Customers Say</h2>
-          <p className="max-w-2xl mx-auto opacity-90">Join thousands of happy plant parents who have transformed their spaces with Green Pots.</p>
+          <p className="max-w-2xl mx-auto opacity-90">Join thousands of happy plant parents who have transformed their spaces with Green Leaf.</p>
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

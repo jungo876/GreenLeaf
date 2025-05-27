@@ -11,7 +11,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center space-x-2 mb-6">
               <Leaf className="h-6 w-6 text-secondary" />
-              <h2 className="text-2xl font-bold font-display">Green Pots</h2>
+              <h2 className="text-2xl font-bold font-display">Green Leaf</h2>
             </div>
             <p className="opacity-80 mb-6">Bringing nature's beauty to your doorstep with premium indoor plants that transform spaces and lives.</p>
             <div className="flex space-x-4">
@@ -67,7 +67,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-white border-opacity-20 mt-12 pt-8 text-center">
-          <p className="opacity-80">&copy; {new Date().getFullYear()} Green Pots. All rights reserved. Designed with 🌱 for plant lovers.</p>
+          <p className="opacity-80">&copy; {new Date().getFullYear()} Green Leaf. All rights reserved. Designed with 🌱 for plant lovers.</p>
         </div>
       </div>
     </footer>
