@@ -93,7 +93,7 @@ export default function ContactForm() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Phone Number</h3>
-                    <p className="opacity-80">8017194298</p>
+                    <p className="opacity-80">918017194298</p>
                   </div>
                 </div>
                 

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Sun, Droplets, Plus } from "lucide-react";
+import { useState } from "react";
 
 // Product data
 const products = [
@@ -106,6 +107,7 @@ const products = [
 ];
 
 export default function ProductsSection() {
+const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
   return (
     <section id="products" className="products-bg py-20 relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -125,7 +127,7 @@ export default function ProductsSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
           {products.map((product, index) => (
             <motion.div
               key={product.id}
@@ -165,12 +167,28 @@ export default function ProductsSection() {
                     </span>
                   </div>
                 </div>
-                <p className="text-gray-600 mb-6 text-sm">
+                <p className="text-gray-600 mb-6 text-sm block sm:hidden">
+                  {expandedIndex === index
+                    ? product.description
+                    : `${product.description.slice(0, 60)}...`}
+                  <button
+                    onClick={() =>
+                      setExpandedIndex(expandedIndex === index ? null : index)
+                    }
+                    className="ml-1 text-blue-600 underline text-xs"
+                  >
+                    {expandedIndex === index ? "See less" : "See more"}
+                  </button>
+                </p>
+
+                {/* Full description for larger screens */}
+                <p className="text-gray-600 mb-6 text-sm hidden sm:block">
                   {product.description}
                 </p>
+
                 <a
-                  href={`https://wa.me/8017194298?text=${encodeURIComponent(
-                    `$Hello! I want to buy:\nPlant Name: ${product.name}\nImage:${product.image}\n(Please Update The Quantity accordingly to your need.)\nQuantity: 1`
+                  href={`https://wa.me/916290660443?text=${encodeURIComponent(
+                    `Hello! I want to buy:\nPlant Name: ${product.name}\nImage:${product.image}\n(Please Update The Quantity accordingly to your need.)\nQuantity: 1`
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
